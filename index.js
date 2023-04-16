@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express()
 
+
 //Self note: cors allows requests from all possible origins (in this case PORTS 3000 and 3001)
 const cors = require("cors");
 app.use(cors())
-
+app.use(express.static("build"));
 app.use(express.json());
 
 
